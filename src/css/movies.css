@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.movie-container{
+    width: 100%;
+    height: 250px;
+    border: 2px solid red;
+}
+
+
+.movie-item{    
+    margin: 8px;
+    /* width: 400px; */
+    height: 250px;
+    display: flex;
+
+}
+
+.movie-item img{
+    object-fit: cover;
+
+}
+
+.movie-row{    
+    display: flex;
+    width: 100%;
+    /* height: 300px; */
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+}
+
+.movie-row::-webkit-scrollbar{
+    display: none;
+}
+
+.movie-item h5{
+    color: black;
+
+}
+
+#main-title{
+    color: white;
+    font-size: 30px;
+}
