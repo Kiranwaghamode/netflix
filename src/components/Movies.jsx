@@ -1,32 +1,26 @@
 import React from 'react'
 import '../css/movies.css'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 
-export const Movies = ({movieList, showTitle}) => {
+export const Movies = ({ movieList, showTitle, sliderMovie }) => {
 
 
-    const imgUrl = 'https://image.tmdb.org/t/p/original'
+  const imgUrl = 'https://image.tmdb.org/t/p/original';
 
-   
 
 
   return (
     <>
-    <h4 id='main-title'>{showTitle}</h4>
+      <h4 id='main-title'>{showTitle}</h4>
 
-    <div className="movie-row">
-    {
-        movieList.map((movie, index)=>(
-            <div key={index} className='movie-item'>
-                <img src={`${imgUrl}${movie.poster_path}`} alt="" />
+      <div className="movie-row">
+        {
+          movieList.map((movie, index) => (
+            <div id='movie-item' key={index} >
+              <img  src={`${imgUrl}${movie.poster_path}`} alt="" onClick={()=>sliderMovie(movie.id)} />
             </div>
-        ))
-    }
-  
-    
-    </div>
+          ))
+        }
+      </div>
     </>
   )
 }
